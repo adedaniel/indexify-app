@@ -1,11 +1,6 @@
-/**
- *  styled-components CSS reset
- */
+import { createGlobalStyle } from 'styled-components';
 
-import { css, createGlobalStyle } from 'styled-components';
-
-// prettier-ignore
-const reset = css`
+export const GlobalStyles = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -23,7 +18,7 @@ const reset = css`
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
+    font-family: 'DM Sans', sans-serif;
     vertical-align: baseline;
   }
 
@@ -61,5 +56,3 @@ const reset = css`
     border-spacing: 0;
   }
 `;
-
-export const GlobalStyles = createGlobalStyle`${reset}`;
