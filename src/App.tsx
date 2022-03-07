@@ -1,16 +1,18 @@
 import React, { FC } from 'react';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { GlobalStyles } from 'globalStyles';
+import Login from 'modules/Login/Login';
+import Comapnies from 'modules/Companies/Comapnies';
 
 const App: FC = () => {
   return (
-    <div>
+    <BrowserRouter>
       <GlobalStyles />
-      <p>
-        Ready to dev with Typescript, styled-components, eslint, prettier,
-        stylelint, and absolute paths :)
-      </p>
-    </div>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Comapnies />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
